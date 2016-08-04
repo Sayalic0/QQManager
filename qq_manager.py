@@ -46,7 +46,6 @@ class QQGroupManager:
             'Referer': 'http://qun.qq.com/member.html'
         }, data='gc=%s&st=0&end=500&sort=0&bkn=%s' % (self.group_number, self.bkn))
 
-        # text = self.parser.unescape(r.text)
         post_ret = json.loads(r.text)
         if post_ret['ec'] != 0:
             return []
